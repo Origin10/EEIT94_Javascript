@@ -5,11 +5,27 @@
     <title>01OperatorPrecedence.html</title>
     <script>
         //++ 遞增 --遞減
+        var a = 1; a2 = 1; a3 = 1; a4 = 1;
+        b = 10 * ++a;
+        q = 2 * --a2;
 
+        document.write("b = 10 * ++a : b= "+ b +"<br>");
+        document.write("q = 2 * --a=: q= " + q + "<br>");
+
+        b2 = 10 * a3++;
+        q2 = 2 * a4--;
+
+        document.write("b2 = 10 * ++a : b= " + b2 + "<br>");
+        document.write("q2 = 2 * a-- : q= " + q2 + "<br>");
 
         //operator precedence
         //== !=  兩邊轉換為同一型別，再比較值是否相等
         //=== !== 會比對值及資料型態是否一致
+
+        var n = 666;
+        var m = "666";
+
+        n == m;
 
 
     </script>

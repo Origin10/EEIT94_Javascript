@@ -6,11 +6,14 @@
     <script>
         //宣告式函數定義
         function showName(pos, name) {
-            return (pos + "," + name);
+            return (pos + "：" + name);
         }
+
 	</script>
 </head>
 <body>
+
+    <input type="button" value="Button" onclick="document.write(showName('pos', 'name'))" />
     <!--HTML連結javascript-->
 </body>
 </html>

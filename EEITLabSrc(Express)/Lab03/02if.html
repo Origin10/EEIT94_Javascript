@@ -3,16 +3,44 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>02if.html</title>
+
+    <style>
+        body {
+
+            font-size:3em;
+            text-align: center;
+        }
+    </style>
+
     <script>
-        var a = 10, b = 20;
+        //var a = 10, b = 20;
 
         //使用window.prompt()方法，取得變數値
+
+        a = parseInt(window.prompt("Please Enter Your Number:", "10"));
+        b = parseInt(window.prompt("Please Enter Your another Number:"));
 
         if (a > b)
             document.write("a > b");
         else
             document.write("a < b");
+        //等於另一種寫法:
 
+        a > b ? document.write("a > b") : document.write("a < b");
+
+        //票
+        age = parseInt(window.prompt("Please Enter Your Age:", "10"));
+        if (age >= 0 && age <= 6 || age >= 65)
+            document.write("free~~");
+        else if(age >=6 && age <=25)
+            document.write("Student price~");
+        else if (age >= 25 && age <= 65)
+            document.write("Full price~");
+        else
+            document.write("Your a bug!!!");
+
+
+        
 	</script>
 </head>
 <body>

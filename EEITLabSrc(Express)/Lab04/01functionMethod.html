@@ -6,44 +6,66 @@
     <script>
         //==========定義函數==================
         //方法一宣告式函數，定義帶參數的函數
-       
+        function AddF(a, b) {
+
+            return (a + b);
+        }
         
-
-
         //==========函式呼叫==================
         //呼叫帶參數的函數
        
-
+        document.write("AddF(4, 6)=" + AddF(4, 6) + "<br/>");
+        
 
         //JavaScript沒有規定function的參數及呼叫function時給予的參數數量必須要一致
         //少掉的參數為undefined，而多的參數會被忽略
+        function AddFx(a, b) {
+            console.log("AddFx(a):" + a);
+            console.log("AddFx(b):" + b);
+            return (a + b);
+        }
 
-
+        AddFx(10);
+        AddFx(10,20,30);
 
         //==========定義函數==================
         //方法二函數實字
+        var AddFy = function (a, b) {
 
+            return (a + b);
+        }
 
-
+        document.write("AddFy(5, 6):" + AddFy(5, 6) + "<br/>");
 
         //列印函數內容
-
+        document.write("AddF:"+ AddF+"<br/>");
 
 
         //==========方法製作==================
         //定義物件
-        
-
+        var person = new Object();
+        person.name = "404_Error";
+        person.id = "xc123456";
+        person["hobby"] = "None";
 
         //定義物件方法
+        person.ErrorName = function () { return this.name + ", hobby:" + this.hobby+"<br/>" };
 
+        person.BugName = pbn;
+        function pbn() { return this.name + ", id:" + this.id + "<br/>" };
 
         //方法呼叫
 
 
+        document.write(person.ErrorName());
+        document.write(person.BugName()); //不能寫pbn()
 
         //==========檢查是否有此方法，是否支援此方法==================
 
+        if (pbn)
+            alert("Yes");
+        else
+            alert("No");
 
 	</script>
 </head>
