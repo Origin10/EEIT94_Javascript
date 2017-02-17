@@ -1,1 +1,1 @@
-﻿window.alert("JavaScript");
+﻿window.alert("JavaScript \n Test");
