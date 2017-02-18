@@ -18,20 +18,26 @@
         //[object class] 一個物件的class屬性是個字串，提供關於該物件的種類的資訊
         //http://www.w3schools.com/jsref/dom_obj_text.asp
         
-        //取得元素
+        
+        function getID(){
+                        //取得元素 ↓
+            AgeVal = document.getElementById("AgeInput").value;//←取得元素值
 
-        //取得元素值
 
-
+            if (isNaN(AgeVal) || AgeVal == null || AgeVal == undefined || AgeVal == "")
+                alert("Please Enter a Number.")
+            else
+                alert(AgeVal);
+        } 
 
         //判斷元素值是否為數字
-
+        
 
     </script>
 </head>
 <body>
-    Age:<input type="text" size="3" maxlength="3" /><!-- 瀏覽器執行到此標籤會建立一個物件-->
+    Age:<input id="AgeInput" type="text" size="3" maxlength="3" /><!-- 瀏覽器執行到此標籤會建立一個物件-->
     <br />
-    <input type="button" value="checkAge"  />
+    <input type="button" value="checkAge" onclick="getID()" />
 </body>
 </html>
