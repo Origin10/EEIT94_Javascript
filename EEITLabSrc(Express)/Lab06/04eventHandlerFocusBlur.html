@@ -16,18 +16,22 @@
         //           fgColor(foreground color)前景顏色即文件上的文字顏色
 
         function blur() {
-            
+            document.bgColor = "lightblue";
         }
 
         function focus() {
-
+            document.bgColor = "lightgreen";
         }
 
         function change() {
-
+            document.fgColor = "brown";
+            document.getElementById("idinput").style.color = "orange";
         }
 
         function ckName() {
+            var theName = document.getElementById("idName").value;
+            if (theName == "")
+                document.getElementById("idsp").innerHTML = "you must enter the name";
 
         }
     </script>

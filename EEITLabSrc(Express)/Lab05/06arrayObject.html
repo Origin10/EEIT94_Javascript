@@ -5,7 +5,7 @@
     <title>06arrayObject.html</title>
     <script>
         ////建立陣列語法 1        
-        var balls = new Array();
+        var balls = new Array();//寫數字沒意義，不會檢查也不會出錯
         //alert(balls.length);
         balls[0] = "basketball";
         balls[1] = "baseball";
@@ -14,26 +14,37 @@
         balls[4] = 123;
         //alert(balls.length);
         //列印陣列語法 1
-        document.write(balls);
+        document.write(balls+"<hr/>");
 
 
         //建立陣列語法 2
-
+        var balls2 = new Array("basketball2", "baseball2", "tennis2", "volleyball2", 123);
 
 
         //建立陣列語法 3
-
+        var balls3 = ["basketball3", "baseball3", "tennis3", "volleyball3", 123];
 
 
         //列印陣列語法 2 -- 使用 for loop
-
-
+        for (i = 0; i < balls2.length; i++) {
+            document.write(balls2[i]+"<br/>");
+        } document.write("<hr/>");
 
         //列印陣列語法 3 -- 使用 for in 
         //for(obj in arrary|object)
+        for (var objB in balls3) {
+            document.write(balls3[objB] + "<br/>");
+        } document.write("<hr/>");
 
+        var person = new Object();//associative關聯陣列
+        person.name = "404_Error";
+        person.id = "xc123456";
+        person["hobby"] = "None";
 
-
+        for (var objP in person) {
+            document.write(person[objP] + "<br/>");
+        } document.write("<hr/>");
+        document.write("person.length: " + person.length +"<hr/> balls.length:" + balls.length);
         /*
             var balls=["basketball","baseball","tennis","volleyball",123];
             document.write("join('-')="+balls.join("-")+"<br>");

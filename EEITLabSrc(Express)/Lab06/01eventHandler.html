@@ -4,17 +4,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>01eventHandler.html</title>
     <script>
-        
+        function f1() {
+            alert("method_1");
+        }
+       
+        window.onload = function () {
+            document.getElementById("m2").onclick = function () { alert("method_2"); };//沒有ready
+        }
+
     </script>
 </head>
 <body>
+    
+
     <!-- HTML屬性事件處理程序 -->
-   
+   <h1 id="m1" onclick="f1()">method_1</h1>
 
     <!-- JavaScript屬性事件處理程序 -->
-    
+    <h1 id="m2">method_2</h1> 
 
     <!-- W3C DOM 處理程序 -->
     
+    <h1 id="m3">method_3</h1> 
+    <script>
+        //document.getElementById("m3").addEventListener("click", f3, false); //不能呼叫實字
+        document.getElementById("m3").addEventListener("click", function () { alert("method_3") });
+                                              //(binding)└事件綁定┘  //匿名函式實字(Anonymous literal function)
+    </script>
+
 </body>
 </html>
