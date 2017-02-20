@@ -5,11 +5,18 @@
     <title>04locationHref.html</title>
     <script>
         //http://www.w3schools.com/jsref/dom_obj_select.asp
+        function redirect(x) {
+
+            var linker = ["#", "https://w3.iiiedu.org.tw/", "https://tw.yahoo.com/", "https://i0.wp.com/www.betterhostreview.com/wp-content/uploads/google-404-error.jpg?fit=615%2C362"]
+
+            location.href = linker[x];
+        }
+
     </script>
 </head>
 <body>
     <!--取得在下拉式選單所選取的索引(selectedIndex)-->
-    <select onchange="redirect();" >
+    <select onchange="redirect(this.selectedIndex);" >
 		<option>selected</option>
 		<option>IIIEDU</option>
 		<option>YAHOO</option>

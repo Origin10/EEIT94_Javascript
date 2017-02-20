@@ -8,9 +8,9 @@
         document.writeln("location protocol=" + location.protocol);
         document.writeln("location hostname=" + location.hostname);
         document.writeln("location port=" + location.port);
-        document.writeln("location host=" + location.host);
+        document.writeln("location host=" + location.host + "(hostName+port)");
         document.writeln("location pathname=" + location.pathname);
-        document.writeln("location hash=" + location.hash);
+        document.writeln("location hash=" + location.hash + "(#bookmark or inputValue)");
         document.writeln("</pre>");
     </script>
 </head>

@@ -4,20 +4,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>01ad.html</title>
     <script>
+        var t = setTimeout(window.close,2000)
+
         window.onload=function () {
+            
+
             document.getElementById("idbutself").onclick = selff;  //事件註冊
             document.getElementById("idbuthref").onclick=hreff;
             document.getElementById("idbutstop").onclick=stopf;
         };
         function selff() {
             //關閉視窗
+            window.close();
         }
         function hreff() {
             //轉向連結到01a.html
+            location.href = "01a.html";
         }
-        function stopf() {
-            //停止計時器
-        }
+            function stopf() {
+                //停止計時器
+                clearTimeout(t);
+            }
+   
     </script>
 </head>
 <body>
