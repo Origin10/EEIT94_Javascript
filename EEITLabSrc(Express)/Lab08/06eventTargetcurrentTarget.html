@@ -11,12 +11,13 @@
 
         //target：回傳觸發事件的元素
         //currentTarget：回傳事件正在處理時所在的元
-        function clickP() {
-            alert("p");  
+        function clickP(ns) {
+            alert("target:" + ns.target + "\n" + "currentTarget:" + ns.currentTarget );
+
         }
 
-        function clickBut() {
-            alert("input"); 
+        function clickBut(ns) {
+            alert("target:" + ns.target + "\n" + "currentTarget:" + ns.currentTarget);
 
         }
     </script>

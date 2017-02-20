@@ -18,6 +18,8 @@
         //取消事件氣泡(bubbling)
         function divClick(nsEvent) {
             window.alert("div");
+            //nsEvent.stopPropagation();//呼叫不到"Document"
+            nsEvent.preventDefault();
             
         }
 
