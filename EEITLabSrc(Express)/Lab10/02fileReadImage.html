@@ -18,22 +18,46 @@
     </style>
     <script>
             function fileViewer(){
-                //取得使用者在檔案選擇標籤中選取檔案
-
-
-                //1. 建立FileReader物件
-
-                //2. 使用readAsDataURL方法，讀取檔案內容
-
-                //3. 建立img標籤
-
-                //4. 設定img的src屬性
-
-                //5. 設定img的class屬性
-
-                //6. 將 img 物件新增到div標籤後
+               
+                var myPhotos = document.getElementById("file1").files;
+                var myPhotosLen = myPhotos.length;
 
                 
+
+                for (i = 0; i < myPhotosLen; i++) {
+
+                        //1. 建立FileReader物件
+
+                        var reader = new FileReader();
+
+                        //2. 使用readAsDataURL方法，讀取檔案內容
+
+                        reader.readAsDataURL(myFiles[i]);
+
+              
+
+                    reader.onload = function (e) {
+
+                        var fileCountent = e.target.result;
+
+                        //3. 建立img標籤
+                        var theImg = document.createElement("img");
+
+                        //4. 設定img的src屬性
+
+                        theImg.setAttribute("src", fileContent);
+
+                        //5. 設定img的class屬性
+
+                        theImg.setAttribute("class", "thumb");
+
+                        //6. 將 img 物件新增到div標籤後
+
+                        document.getElementById("dropZone").appendChild(theImg);
+                    }
+
+                }
+
             }
 
     </script>
@@ -41,7 +65,7 @@
 </head>
 
 <body>
-    <input type="file" id="file1" multiple accept="image/*" onchange="fileViewer()"><br>
+    <input type="file" id="file1" multiple="multiple" accept="image/*" onchange="fileViewer()"/><br/>
     <div id="dropZone"></div>
 </body>
 </html>

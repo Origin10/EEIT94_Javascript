@@ -6,15 +6,41 @@
     <script>
             function fileViewer(){
                 //取得使用者在檔案選擇標籤中選取檔案
+                var myFiles = document.getElementById("file1").files;
+
+                //alert(myFile);//object fileList 需要用for迴圈讀出
+
+                var myFileLen = myFiles.length;
+
+                for (i = 0; i < myFileLen; i++) {
+                    
+                    //alert(myFiles[i])
+
+                    //alert(myFiles[i].name+","+myFile[i].size);
+
+                    //1. 建立FileReader物件
+
+                    var reader = new FileReader();
+
+                    //2. 使用readAsText方法，讀取檔案內容
+
+                    reader.readAsText(myFiles[i], "UTF-8");
+                }
 
 
-                //1. 建立FileReader物件
+                reader.onload = function (e) {
+                    //只要有載入系統就會出現事件物件
+                    var fileCountent = e.target.result;
+                    alert(e.target.result);
+
+                    //3. 將檔案內容放textarea標籤內
 
 
-                //2. 使用readAsText方法，讀取檔案內容
+                    document.getElementById("show").innerHTML = fileCountent;
+                }
 
 
-                //3. 將檔案內容放textarea標籤內
+                
 
 
             }

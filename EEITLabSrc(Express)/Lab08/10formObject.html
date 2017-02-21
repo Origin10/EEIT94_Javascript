@@ -11,20 +11,35 @@
         };
 
         function checkf() {
+            var eles = document.forms[0].elements;
+            var elesLen = eles.length;
+            alert(elesLen);
+            for (var i = 0; i < elesLen; i++) {
 
-        }
+                if (eles[i].checked) {
+                    alert(eles[i].value);
+                }
+            }
+        };
 
         function resetf() {
             document.forms[0].reset();
-        }
+        };
 
         function submitf() {
+            var theName = document.getElementsByName("txtName")[0].value;
 
-        }
+            if (theName == "") {
+                document.getElementById("idsp").innerHTML = "you must enter";
+            } else {
+                document.forms[0].submit();
+            }
+        };
+        
     </script>
 </head>
 <body>
-    <form action="get.jsp" method="get">
+    <form action="http://192.168.31.113:8080/get.jsp" method="get">
 			name:<input type="text" name="txtName" value="abc" /><span id="idsp"></span><br/>
 			<input type="checkbox" name="hobby" checked="checked" value="reading"/>reading
 			<input type="checkbox" name="hobby" value="game"/>game

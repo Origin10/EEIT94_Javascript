@@ -5,16 +5,21 @@
     <title>01DOM.html</title>
     <script >
         window.onload = function () {
-            alert(document.nodeType);  //9
-            alert(document.nodeName);  //#document
-            alert(document.nodeValue);  //null
+            //alert(document.nodeType);  //9
+            //alert(document.nodeName);  //#document
+            //alert(document.nodeValue);  //null
 
             //取得根元素 documentElement
             var root = document.documentElement;  //HTML
+            //alert(root.nodeType);  //1
+            //alert(root.nodeName);  //Html
+            //alert(root.nodeValue);  //null
 
 
             var thebody = root.childNodes[1];  //BODY
-
+            alert(thebody.nodeType);  //1
+            alert(thebody.nodeName);  //Html
+            alert(thebody.nodeValue);  //null
 
             var theNode = root.childNodes[1].childNodes[3].childNodes[3];  //LI
             //alert(root.childNodes[1].childNodes[3].nodeName);  //UL
@@ -28,8 +33,8 @@
 
             var lis = document.getElementsByTagName("li");
             for (var i = 0; i < lis.length; i++) {
-                //alert(lis.item(i).firstChild.nodeValue);
-                //alert(lis[i].firstChild.nodeValue);
+                alert(lis.item(i).firstChild.nodeValue);
+                alert(lis[i].firstChild.nodeValue);
 
             }
         };
